@@ -1,40 +1,31 @@
-<p align="center"><img height="100px" src="https://res.cloudinary.com/bytefury/image/upload/v1545225776/laraspace-logo_cvcsex.png"></p>
+## Requirements
+XAMPP Web Server 
+composer https://getcomposer.org/download/
+Laravel Installation https://laravel.com/docs/5.8/installation
+PHP 7
 
-## Introduction
+## Installation
 
-Laraspace is an Admin starter template for Laravel 5.6 PHP Framework which includes all the necessary boilerplate for your next web application.
+1. Using your preferred terminal , go to the lending folder and run the following command to set a random secure Application Key `php artisan key:generate`
+2. Rename `.env.example` to `.env` file in your favorite text editor and set the database credentials.
+Change the ff:
 
-### Features
-- Multiple Layouts
-- Responsive layout
-- Pace Loader
-- Admin Authentication
-- Built-in Settings API
-- Automatic Validation Errors
-- Easy Notifications API
-- Hundreds of UI Components
-- Dozens of Widgets
-- Sass for CSS preprocessing (compiled CSS included)
-- Laravel Mix Configuration
-- Clean and Friendly Code
-- Detailed Responsive Documentation with examples.
-- Dozens of Form Plugins
-- Example VueJS Apps
-- Vue Admin
-- JWT Auth
-- Image Cropper
-- Star Ratings
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
 
-## Documentation
-You can find the Laraspace documentation <a href="http://docs.laraspace.in" target="_blank">on the website</a>.
+3. `php artisan migrate --seed` run this command to migrate & seed the database. ( Make sure that you're inside the app's root directory )
+4. Install NPM globally if you haven't installed that already , for more information please refer this [Link](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+5. After installing NPM globally , run `npm install` inside your webroot , it will download all the required dependencies.
+6. Run `npm run dev` for compiling sass and js files.
+7. Laraspace makes use of `Laravel Mix` for compiling sass files and js files (webpack).
+8. You are ready to launch!
 
-## Versions
+## User Accounts
 
-Laraspace comes with 3 versions
-- Default (Laravel + jQuery + VueJS)
-- Vue SPA (Laravel + VueJS + Vue-Router) - [Link](http://github.com/laraspace/laraspace-vue)
-- HTML - [Link](http://github.com/laraspace/laraspace-html)
-
-## License
-
-Laraspace is now an open-sourced software licensed under the MIT license.
+Administrators
+1. email: renan.acuin@lending.co
+   password: admin@123
+   
+2. email: jayson.suyat@lending.co
+   password: admin@123
